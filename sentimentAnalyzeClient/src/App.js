@@ -21,7 +21,10 @@ class App extends React.Component {
   If the requested input mode is "text" it returns a textbox with 4 rows.
   If the requested input mode is "url" it returns a textbox with 1 row.
   */
- 
+ componentDidMount(){
+    document.title = "Sentiment Analyzer"
+  }
+
   renderOutput = (input_mode)=>{
     let rows = 1
     let mode = "url"
@@ -73,6 +76,7 @@ class App extends React.Component {
   
 
   render() {
+    
     return (  
       <div className="App">
       <button className="btn btn-info" onClick={()=>{this.renderOutput('text')}}>Text</button>
